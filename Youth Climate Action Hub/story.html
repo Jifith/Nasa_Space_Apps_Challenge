@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Climate Stories</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        header {
+            background-color: #2f4f4f;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #006400;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column; /* Makes the stories appear in a single column */
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .card-content {
+            display: none;
+            text-align: left;
+            margin-top: 20px;
+            color: #333;
+            font-size: 1rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .card.active {
+            transform: scale(1.05);
+            background-color: #fafafa;
+        }
+
+        .card.active .card-content {
+            display: block;
+            max-height: 1000px; /* Ensures the content shows when active */
+            padding-top: 10px;
+        }
+
+        footer {
+            background-color: #2f4f4f;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+
+    </style>
+    <script>
+        function toggleCardContent(cardId) {
+            var cards = document.querySelectorAll('.card');
+            cards.forEach(function (card) {
+                // Close all other cards
+                if (card.id !== cardId) {
+                    card.classList.remove('active');
+                }
+            });
+
+            // Toggle the clicked card
+            var card = document.getElementById(cardId);
+            card.classList.toggle('active');
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Interactive Climate Stories</h1>
+    </header>
+
+    <!-- Main content container -->
+    <div class="container">
+
+        <!-- Interactive Cards section -->
+        <div class="section" id="interactive-cards">
+            <h2>Choose an issue to read a story about it...</h2>
+            <div class="cards">
+
+                <div class="card" id="card1" onclick="toggleCardContent('card1')">
+                    <h3>Drought</h3>
+                    <p>Click to reveal the story</p>
+                    <div class="card-content">
+                        <p>Amelia had always known Drybrook as a place of abundance. For generations, her family had tilled the same land, and the valley was blessed with fertile soil. But as the years passed, the rains grew sparse. First, it was just one bad season. But then, one bad season turned into five. The skies, once a blessing, became a source of dread. Without the rains, nothing grew.<br>
+
+                            Amelia's son, Finn, was only fifteen when he decided that he couldn't watch the land die any longer. "Ma, I'm going to the river," he'd said one morning. The river was a five-day walk, and Finn was determined to find water and save what was left of their crops. Amelia knew it was dangerous, but what other choice did they have?<br>
+                            
+                            The caravan that Finn joined was made up of other villagers, each more desperate than the last. Some were farmers like Amelia, others were herders whose animals were dropping dead from dehydration. They walked in the blistering heat, their faces covered in cloth to protect them from the dust that rose with each step. Finn’s heart pounded as they trekked across the arid land, driven by the hope of finding water.<br>
+                            
+                            Meanwhile, back at the farm, Amelia watched the clouds form in the distance. A storm, she thought, finally. But when the rain came, it wasn’t the soft, nourishing drizzle that the land needed. It was a torrential downpour. The ground, dry and cracked from months of drought, couldn’t absorb the water fast enough. It flooded the fields, washing away what little remained of the crops.<br>
+                            
+                            Finn and the caravan found the river, but it was barely a trickle. As they filled their canisters, they learned of other towns that had already perished, their people displaced, their homes abandoned. The landscape was unforgiving. Amelia waited for weeks for Finn to return. When he did, it was with a grim face and empty hands. The water was gone, the crops were gone, and so too was the life they had once known. Drybrook was no longer a place of abundance. It was now a place of survival.</p>
+                    </div>
+                </div>
+
+                <div class="card" id="card2" onclick="toggleCardContent('card2')">
+                    <h3>Flood</h3>
+                    <p>Click to reveal the story</p>
+                    <div class="card-content">
+                        <p>In Riverton, where the river met the sea, Elias had always loved the sound of the waves. It was the music of his childhood, the background to every memory. But over the years, the waves grew louder, angrier. The seawall that had protected the town for decades seemed smaller, weaker against the rising tides.<br>
+
+                            It started as a whisper, the news of floods in distant cities. Elias and his family heard stories of villages underwater, of people wading through the streets where they had once walked. But Riverton had always been safe. The seawall stood between them and the ocean, and for as long as Elias could remember, it had never been breached.<br>
+                            
+                            That all changed on the night of the great storm. The wind howled through the streets, rattling windows and shaking doors. Elias held his daughter, Amina, close as they listened to the storm rage outside. He thought of his ancestors, who had built Riverton brick by brick, never imagining that the ocean would one day threaten to take it all away.<br>
+                            
+                            At first, it was just a trickle. Water seeped through the cracks in the seawall, slowly filling the streets. But as the storm intensified, the trickle became a flood. The wall, once so strong and impenetrable, crumbled under the weight of the waves. Within hours, the streets were rivers. Houses that had stood for generations were submerged, their foundations washed away.<br>
+                            
+                            Elias and Amina joined the rest of the town in their frantic escape to higher ground. They took refuge in the old schoolhouse, which had been built on a hill overlooking the city. From there, they watched as the floodwaters rose higher and higher, swallowing the town whole. By morning, Riverton was unrecognizable. The streets where Elias had played as a child were now part of the ocean, the seawall just a memory.<br>
+                            
+                            Amina, too young to understand the magnitude of the loss, clung to her father, asking when they could go home. But Elias knew there was no home to return to. Riverton was gone, and with it, the life they had known.</p>
+                    </div>
+                </div>
+
+                <div class="card" id="card3" onclick="toggleCardContent('card3')">
+                    <h3>Wildfires</h3>
+                    <p>Click to reveal the story</p>
+                    <div class="card-content">
+                        <p>Pine Ridge had always been Jason’s sanctuary. As a forest ranger, he had spent years patrolling its vast stretches of wilderness, ensuring the safety of both the wildlife and the people who visited. But that summer, something was different. The air was dry, the trees brittle, and the ground, usually damp with morning dew, was bone dry.<br>
+
+                            Jason had seen wildfires before, but none like this. The heat was relentless, and it seemed that every day brought news of new fires breaking out across the state. Pine Ridge had been spared so far, but Jason knew it was only a matter of time.<br>
+                            
+                            The first flames appeared on the horizon one afternoon. By the time Jason and his team reached the site, the fire had already spread. Fueled by the dry conditions and high winds, it raced through the forest, consuming everything in its path. The smell of smoke filled the air, and the sky turned a sickly orange.<br>
+                            
+                            For days, Jason and his team fought the fire, trying to contain it. They worked tirelessly, digging firebreaks and dousing the flames with water. But the fire was relentless, and it seemed that no matter how hard they worked, it kept spreading.<br>
+                            
+                            The worst part wasn’t the fire itself, but the aftermath. The once lush and vibrant forest was now a blackened wasteland. Trees that had stood for centuries were reduced to ash, and the animals that had called the forest home were gone. Jason walked through the charred remains of the forest, feeling a deep sense of loss. Pine Ridge had been his home, his refuge, and now it was gone.<br>
+                            
+                            As the sun set on the last day of the fire, Jason stood at the edge of the forest and watched the flames flicker and die. The fire was finally out, but the damage was done. The forest would take years to recover, if it ever did. And Jason knew that this fire was just one of many. The world was changing, and the fires were only going to get worse.</p>
+                    </div>
+                </div>
+
+                <div class="card" id="card4" onclick="toggleCardContent('card4')">
+                    <h3>Melting Glaciers</h3>
+                    <p>Click to reveal the story</p>
+                    <div class="card-content">
+                        <p>Norah had spent her entire career studying glaciers. She had always been fascinated by their beauty, their power, and their ability to shape the landscape. But in recent years, her research had taken on a new urgency. The glaciers were melting, and they were melting fast.<br>
+
+                            Norah had visited the Glacier of Aeloria many times before, but this time was different. The glacier, once a towering wall of ice, had receded dramatically. Huge chunks of ice broke off and crashed into the sea, raising the water level and creating waves that lapped at the shore.<br>
+                            
+                            Norah and her team set up camp near the glacier, taking measurements and recording data. They had been there for only a few days when they heard a loud crack. It echoed through the valley, and Norah knew immediately what had happened. A massive section of the glacier had broken off and collapsed into the sea.<br>
+                            
+                            The team watched in silence as the ice plunged into the water, sending up a spray of mist. It was a moment of awe, but also of sadness. Norah knew that they were witnessing the end of something that had existed for thousands of years.<br>
+                            
+                            The melting of the glaciers wasn’t just a problem for the environment. It was a problem for the people who lived in the areas affected by rising sea levels. Entire communities were being displaced as the water encroached on their homes. Norah’s research was more important than ever, but she couldn’t shake the feeling that it was too late. The damage had already been done.<br>
+                            
+                            As they packed up their camp and prepared to leave, Norah took one last look at the glacier. It was still beautiful, still powerful, but it was also fragile. And in the end, it was the fragility of the world’s glaciers that would be their undoing.</p>
+                    </div>
+                </div>
+
+                <div class="card" id="card5" onclick="toggleCardContent('card5')">
+                    <h3>Coral Bleaching</h3>
+                    <p>Click to reveal the story</p>
+                    <div class="card-content">
+                        <p>Nadia had always been drawn to the ocean. As a marine biologist, she had spent years studying the coral reefs of Azure Bay, one of the most vibrant and diverse ecosystems in the world. But over the past few years, she had noticed a disturbing trend. The corals were dying.<br>
+
+                            It started slowly, with just a few patches of white coral here and there. But soon, entire sections of the reef were turning ghostly white, a phenomenon known as coral bleaching. Nadia knew that the cause was rising ocean temperatures. The warmer water was stressing the coral, causing them to expel the algae that gave them their color and provided them with nutrients.<br>
+                            
+                            Nadia spent hours diving among the reefs, documenting the bleaching. It was heartbreaking to see the once colorful reef reduced to a lifeless expanse of white. The fish that had once swarmed around the coral were gone, and the reef was eerily silent.<br>
+                            
+                            She knew that without immediate action, the reef would never recover. Coral bleaching events were becoming more frequent, and the reef was running out of time. Nadia dedicated her life to raising awareness about the issue, but it often felt like an uphill battle. People were reluctant to change their ways, and the problem seemed too big to fix.<br>
+                            
+                            But Nadia refused to give up. She continued her work, hoping that one day, people would realize the importance of saving the world’s coral reefs before it was too late.</p>
+                    </div>
+                </div>
+
+                <div class="card" id="card6" onclick="toggleCardContent('card6')">
+                    <h3>Rising Sea Levels</h3>
+                    <p>Click to reveal the story</p>
+                    <div class="card-content">
+                        <p>Tima had grown up on the island of Tahana, a small, remote island in the Pacific Ocean. Her family had lived on the island for generations, fishing the waters and farming the land. But over the past few years, things had started to change. The sea was rising, and the island was slowly being swallowed by the ocean.<br>
+
+                            Tima had noticed the changes first. The beach where she had played as a child was now underwater, and the tides seemed to be getting higher every year. The elders spoke of the need to relocate, to find a new home on higher ground, but Tima couldn’t bear the thought of leaving the island that had been her family’s home for so long.<br>
+                            
+                            But the sea didn’t care about her feelings. The water continued to rise, and with each passing year, more and more of the island disappeared. Tima’s family was forced to move inland, leaving behind their old home and the memories that came with it.<br>
+                            
+                            Then came the storm. It was the worst Tima had ever seen. The waves surged over the island, flooding homes and washing away everything in their path. Tima and her family were lucky to escape with their lives, but many others weren’t so fortunate.<br>
+                            
+                            In the aftermath of the storm, the island was devastated. Homes were destroyed, crops were ruined, and the once vibrant community was in ruins. The elders were right. It was time to leave.<br>
+                            
+                            Tima packed her bags, tears streaming down her face as she said goodbye to the only home she had ever known. The island of Tahana was no longer a place where people could live. The sea had claimed it, and now it was time to move on. But Tima knew that she would carry the island with her in her heart, wherever she went.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Interactive Climate Stories</p>
+    </footer>
+
+</body>
+</html>
