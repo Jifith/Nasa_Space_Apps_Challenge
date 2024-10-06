@@ -74,6 +74,156 @@
             text-align: center;
             color: white;
         }
+        .sdg13-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Container box styling */
+.sdg13-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    border: 1px solid #ddd;
+}
+
+/* SDG13 content layout */
+.sdg13-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Image styling */
+.sdg13-img {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Text content styling */
+.sdg13-text {
+    flex: 1;
+}
+
+/* Sub-heading and list styling */
+.sdg13-text h3 {
+    color: #006400;
+    margin-bottom: 10px;
+}
+
+.sdg13-text ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.sdg13-text ul li {
+    margin-bottom: 10px;
+}
+
+.sdg13-text p {
+    margin-bottom: 20px;
+}
+
+/* Climate in Kerala container styling */
+.climate-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    border: 1px solid #ddd;
+}
+
+/* Content layout and spacing */
+.climate-content {
+    flex: 1;
+    color: #333;
+}
+
+/* Headings inside the content */
+.climate-content h3 {
+    color: #006400;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+.climate-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Link styling */
+.climate-content a {
+    color: #006400;
+    text-decoration: none;
+}
+
+.climate-content a:hover {
+    text-decoration: underline;
+}
+
+/* What is Climate Change container styling */
+.climate-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    border: 1px solid #ddd;
+}
+
+/* Content layout and spacing */
+.climate-content {
+    flex: 1;
+    color: #333;
+}
+
+/* Paragraph styling */
+.climate-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Climate Impact Cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 20px);
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Link styling */
+.climate-content a {
+    color: #006400;
+    text-decoration: none;
+}
+
+.climate-content a:hover {
+    text-decoration: underline;
+}
+
+
     </style>
 </head>
 <body>
@@ -95,30 +245,57 @@
     <!-- Main content container -->
     <div class="container">
 
-        <!-- What is Climate Change section -->
-        <div class="section" id="climate-change">
-            <h2>What is Climate Change?</h2>
-            <p>Climate change refers to long-term changes in temperature and weather patterns. These shifts may be natural, but since the 1800s, human activities have been the main driver of climate change, primarily due to the burning of fossil fuels.</p>
-            <div class="cards">
-                <div class="card">
-                    <img src="Images/Global Warming.jpg" alt="Global Warming">
-                    <h3>Global Warming</h3>
-                    <p>Find out how rising temperatures are affecting Earth’s climate and ecosystems.</p>
-                </div>
-                <div class="card">
-                    <img src="Images/Sea Level Rise.jpg" alt="Sea Level Rise">
-                    <h3>Sea Level Rise</h3>
-                    <p>Discover the impact of melting glaciers and rising sea levels on coastal communities.</p>
-                </div>
-                <div class="card">
-                    <img src="Images/Extreme Weather.jpeg" alt="Extreme Weather" style="width: 500px; height: auto;">
-                    <h3>Extreme Weather</h3>
-                    <p>Learn how climate change is intensifying extreme weather events like hurricanes and droughts.</p>
-            
+      <!-- SDG 13 Section -->
+<div class="section sdg13-box" id="sdg13">
+    <h2>SDG 13: Climate Action</h2>
+    <div class="sdg13-content">
+        <img src="Images/sdg13.jpg" alt="SDG 13 Climate Action" class="sdg13-img" style="width: 500px; height: auto;">
+        <div class="sdg13-text">
+            <p>SDG 13 is one of the 17 Sustainable Development Goals (SDGs) established by the United Nations. It calls for urgent action to combat climate change and its impacts by regulating emissions, promoting renewable energy, and supporting adaptation efforts.</p>
+            <h3>Targets of SDG 13</h3>
+            <ul>
+                <li><strong>Target 13.1:</strong> Strengthen resilience and adaptive capacity to climate-related hazards and natural disasters in all countries.</li>
+                <li><strong>Target 13.2:</strong> Integrate climate change measures into national policies, strategies, and planning.</li>
+                <li><strong>Target 13.3:</strong> Improve education, awareness, and human and institutional capacity on climate change mitigation, adaptation, impact reduction, and early warning.</li>
+                <li><strong>Target 13.A:</strong> Implement the commitment undertaken by developed-country parties to the United Nations Framework Convention on Climate Change (UNFCCC) to a goal of mobilizing $100 billion annually by 2020 for addressing the needs of developing countries.</li>
+                <li><strong>Target 13.B:</strong> Promote mechanisms for raising capacity for effective climate change-related planning and management in least developed countries and small island developing states.</li>
+            </ul>
+            <p>Achieving SDG 13 requires collaboration across borders, industries, and communities. Everyone has a role to play in fighting climate change, from government leaders to youth advocates.</p>
+        </div>
+    </div>
+</div>
 
-                </div>
+
+
+       <!-- What is Climate Change section -->
+<div class="section climate-box" id="climate-change">
+    <h2>What is Climate Change?</h2>
+    <div class="climate-content">
+        <p>Climate change refers to long-term shifts in temperatures and weather patterns. While some changes may be natural, human activities have been the primary driver of climate change since the 1800s, mainly due to the burning of fossil fuels, which increases greenhouse gas levels in the atmosphere.</p>
+        
+        <p>These changes are already having noticeable effects on ecosystems, economies, and communities across the globe. From global warming to extreme weather events, the impacts of climate change are widespread and often devastating.</p>
+
+        <!-- Climate Impact Cards -->
+        <div class="cards">
+            <div class="card">
+                <img src="Images/Global Warming.jpg" alt="Global Warming">
+                <h3>Global Warming</h3>
+                <p>Find out how rising temperatures are affecting Earth’s climate and ecosystems.</p>
+            </div>
+            <div class="card">
+                <img src="Images/Sea Level Rise.jpg" alt="Sea Level Rise">
+                <h3>Sea Level Rise</h3>
+                <p>Discover the impact of melting glaciers and rising sea levels on coastal communities.</p>
+            </div>
+            <div class="card">
+                <img src="Images/Extreme Weather.jpeg" alt="Extreme Weather" style="width: 500px; height: auto;">
+                <h3>Extreme Weather</h3>
+                <p>Learn how climate change is intensifying extreme weather events like hurricanes, droughts, and floods.</p>
             </div>
         </div>
+    </div>
+</div>
+
 
         <!-- NASA Earth Data section -->
         <div class="section" id="nasa-data">
@@ -160,12 +337,34 @@
             </div>
         </div>
 
-        <!-- Climate in My Community section -->
-        <div class="section" id="community">
-            <h2>Climate in My Community</h2>
-            <p>Learn how climate change is affecting your local area. Use NASA's data tools to understand the impact in your region.</p>
-            <!-- You can add maps or interactive tools here later -->
-        </div>
+        <!-- Climate in Kerala section -->
+<div class="section climate-box" id="community">
+    <h2>Climate in Kerala</h2>
+    <div class="climate-content">
+        <p>Kerala, with its unique geographical location between the Western Ghats and the Arabian Sea, is particularly vulnerable to the impacts of climate change. In recent years, the state has witnessed increasingly erratic weather patterns, severe flooding, and extended periods of drought, directly affecting the livelihoods of millions.</p>
+        
+        <h3>Rising Temperatures and Erratic Monsoons</h3>
+        <p>One of the major changes in Kerala’s climate is the shift in the monsoon season. Kerala is traditionally dependent on the Southwest Monsoon for agriculture and water supply. However, due to climate change, rainfall patterns have become unpredictable, with periods of excessive rain leading to devastating floods and insufficient rainfall causing drought-like conditions. The rising temperatures also exacerbate water scarcity during the summer months.</p>
+        
+        <h3>Impact on Agriculture</h3>
+        <p>Agriculture in Kerala, particularly crops like rice, coconut, spices, and rubber, has been severely impacted by climate change. Flash floods and unseasonal rains have destroyed crops, leading to economic losses for farmers. Additionally, rising temperatures are affecting crop productivity and altering growing seasons, making farming more unpredictable.</p>
+
+        <h3>Coastal Erosion and Sea-Level Rise</h3>
+        <p>With a coastline stretching over 580 kilometers, Kerala's coastal areas are experiencing significant impacts from rising sea levels. Coastal erosion is displacing communities, threatening homes and infrastructure, while seawater intrusion into freshwater sources is damaging the state’s fragile ecosystems. Fisheries, a key source of livelihood for many, are also being threatened by warmer sea temperatures, which are affecting fish migration patterns and marine biodiversity.</p>
+
+        <h3>Biodiversity Loss</h3>
+        <p>Kerala’s rich biodiversity, particularly in the Western Ghats, is under threat. Climate change is altering habitats and increasing the risk of extinction for endemic species. Shifts in temperature and rainfall are affecting forest ecosystems, with higher vulnerability to forest fires, invasive species, and pest outbreaks.</p>
+
+        <h3>Extreme Weather Events</h3>
+        <p>The 2018 and 2019 floods in Kerala were stark reminders of the increasing frequency and intensity of extreme weather events caused by climate change. Landslides, triggered by excessive rainfall, have become more common in hilly areas, leading to loss of lives and property. These extreme events have underscored the urgent need for climate resilience and disaster preparedness in the state.</p>
+        
+        <h3>Adaptation and Mitigation Efforts</h3>
+        <p>Kerala is actively working on climate adaptation measures, including sustainable agriculture practices, conservation of water resources, and disaster management planning. The state government has also initiated programs to promote renewable energy, like solar power, and is investing in building climate-resilient infrastructure. However, the path to long-term sustainability requires greater collaboration between government agencies, local communities, and international organizations.</p>
+
+        <p>Stay informed about local climate trends by accessing real-time data from <a href="https://earthdata.nasa.gov">NASA’s Earth Data tools</a> to understand the specific impact of climate change in your region. These tools can help communities prepare for the future by providing insights into temperature changes, sea level rise, and extreme weather events in Kerala.</p>
+    </div>
+</div>
+
 
     </div>
 
